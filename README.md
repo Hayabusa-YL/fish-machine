@@ -1,4 +1,4 @@
-﻿# fish-machine（整机系统）
+# fish-machine（整机系统）
 
 一套**可复核的判定规则与经验读数**。
 
@@ -12,6 +12,26 @@ node tools/d4-risk.mjs      # 事故-结构比率 R，衡量结构扩张是否�
 ```
 
 两个脚本不依赖第三方包（Node 18+），数据位于 `memory/audit/`，按相对路径读取，不访问网络。
+
+## 两个入口
+
+同一批代码，两个用途：研究者看它怎么被推翻，使用者看它怎么被跑起来。
+
+**给使用者**——查一批模型回答里哪句在编：
+
+```bash
+node tools/audit.mjs --input examples/answers.sample.jsonl --label "你的批次名"
+```
+
+输入是 jsonl，每行 `{id, prompt, response}`；输出一份四段式报告：总览、可疑条目、口径声明、复现。报告样例见 `docs/product/demo-report.md`（真实数据、真实读数，未手改）。
+
+**给研究者**——理论怎么被检验、读数怎么被推翻：
+
+- `docs/theory/`：七条理论原文与索引
+- `REPRODUCE.md`：每条陈述 → 命令 → 期望输出
+- `memory/audit/`：人工标注、原始回答、登记与读数留存
+
+产品面不新增判定能力，只把已有判定器包成可交付的报告；学术面不因产品化删减任何撤回记录与不声明条目。
 
 ## 分工
 
