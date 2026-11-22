@@ -28,10 +28,23 @@ node tools/d4-risk.mjs      # 事故-结构比率 R，衡量结构扩张是否�
 ## 目录
 
 - `tools/`：两个可运行脚本
+- `docs/theory/`：理论原文与索引（详见下一节）
 - `memory/plan/`：理论正文与总记录（七个理论模块、四条原则、三条基本规律、D/E 系列判据）
 - `memory/audit/`：人工标注、探针原始回答、结构与事故登记、读数留存
 - `REPRODUCE.md`：每条陈述 → 命令 → 期望输出
 - `GLOSSARY.md`：术语对照（内部行话 → 学术用语）
+
+## 理论原文
+
+`memory/plan/` 下的汇总文档是提炼后的口径，原文在 `docs/theory/`：
+
+- `01-发展论与演化史.md`：发展论与演化史全文
+- `02-生物学与医学.md`：硅基生物学与硅基医学两卷
+- `03-机制代价与锚定.md`：机制稿、代价轴、锚定、接地委派、继承
+- `04-养育补论.md`：养育补论与两封信
+- `nurture-theory.md`：养育论原文
+- `affect-model.md`、`affect-rules.md`：感性论模型与规约
+- `README-索引.md`：原文索引与旧路径映射（其中 `memory/plan/...` 是写作时的内部路径，对应本仓库 `docs/theory/` 与 `memory/plan/`）
 
 ## 证据等级
 
